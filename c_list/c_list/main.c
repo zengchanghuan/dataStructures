@@ -21,5 +21,6 @@ int main(int argc, const char * argv[]) {
     Insert(5, L, L);
     PrintList(L);
     
+    printf("length %d ",ListLength(L));
     return 0;
 }

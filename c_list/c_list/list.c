@@ -116,3 +116,18 @@ void PrintList(List L) {
     }
     printf("\n");
 }
+
+int ListLength(List L) {
+    List p = L;
+    int length = 0;
+    if (IsEmpty(L)) {
+        return length;
+    }
+    
+    p = p->Next;
+    while (p != NULL) {
+        length++;
+        p = p->Next;
+    }
+    return length;
+}
