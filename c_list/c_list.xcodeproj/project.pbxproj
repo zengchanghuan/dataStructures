@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8E86256127EEA2BE003DA62F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E86256027EEA2BE003DA62F /* main.c */; };
+		8E86256B27EEA37A003DA62F /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E86256927EEA37A003DA62F /* list.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		8E86255D27EEA2BE003DA62F /* c_list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_list; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E86256027EEA2BE003DA62F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8E86256827EEA37A003DA62F /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		8E86256927EEA37A003DA62F /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
+		8E86256A27EEA37A003DA62F /* fatal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fatal.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,9 @@
 		8E86255F27EEA2BE003DA62F /* c_list */ = {
 			isa = PBXGroup;
 			children = (
+				8E86256A27EEA37A003DA62F /* fatal.h */,
+				8E86256927EEA37A003DA62F /* list.c */,
+				8E86256827EEA37A003DA62F /* list.h */,
 				8E86256027EEA2BE003DA62F /* main.c */,
 			);
 			path = c_list;
@@ -120,6 +127,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E86256127EEA2BE003DA62F /* main.c in Sources */,
+				8E86256B27EEA37A003DA62F /* list.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
