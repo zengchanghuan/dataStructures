@@ -6,11 +6,11 @@
 //
 
 #include <stdio.h>
-#include "arrayStack.h"
+#include "LinkedStack.h"
 int main(int argc, const char * argv[]) {
     // insert code here...
-        
-    Stack S = CreateStack(10);
+    
+    Stack S = CreateStack();
 
     printf("栈S%s为空\n", IsEmpty(S)?"":"不");
 
@@ -26,6 +26,11 @@ int main(int argc, const char * argv[]) {
     Pop(S);
     PrintStack(S);
 
+    MakeEmpty(S);
+    printf("栈S%s为空\n", IsEmpty(S)?"":"不");
     DisposeStack(S);
+    
+    
+
     return 0;
 }
