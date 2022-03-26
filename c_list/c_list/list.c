@@ -68,6 +68,7 @@ void Insert(ElementType X, List L, Position P) {
     tmpCell->Next = P->Next;
     P->Next = tmpCell;
 }
+
 /* Incorrect DeleteList algorithm */
 /*
 void DeleteList(List L) {
