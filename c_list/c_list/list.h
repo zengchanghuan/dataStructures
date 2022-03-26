@@ -56,7 +56,7 @@ ElementType Retrieve(Position P);
 
 //遍历输出链表
 void PrintList(List L);
-
+//void Travel(List list);
 //链表长度
 int ListLength(List L);
 

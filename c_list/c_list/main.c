@@ -25,12 +25,12 @@ int main(int argc, const char * argv[]) {
     // 数组长度 = 数组的总空间大小 / 数组中每个元素所占空间大小
     int len = sizeof(datas) / sizeof(datas[0]);
     List L = CreateHeadListWithHead(datas, len);
-    PrintList(L);
+    Travel(L);
     
     
     List L2 = CreateHeadListWithTail(datas, len);
     printf("IsEmpty = %d\n",IsEmpty(L2));
-    PrintList(L2);
+    Travel(L2);
     
     printf("length %d ",ListLength(L));
     return 0;

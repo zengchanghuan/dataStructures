@@ -108,7 +108,7 @@ ElementType Retrieve(Position P) {
 }
 
 void PrintList(List L) {
-    if (L == NULL) {
+    if (IsEmpty(L)) {
         return;
     }
     
@@ -119,7 +119,19 @@ void PrintList(List L) {
     }
     printf("\n");
 }
-
+/*
+void Travel(List list){
+    List p = list;
+    if(!IsEmpty(list)){    // 单链表非空情况下才遍历
+        p = p -> Next;        // 因为带头结点单链表所以要先走一步
+        while(p != NULL){
+            printf("%d\t", p -> Element);
+            p = p -> Next;
+        }
+        printf("\n");
+    }
+}
+*/
 int ListLength(List L) {
     List p = L;
     int length = 0;
