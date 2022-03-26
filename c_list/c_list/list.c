@@ -27,7 +27,9 @@ List MakeEmpty(List L) {
     return L;
 }
 int IsEmpty(List L) {
-    return L->Next == NULL;
+//    return L->Next == NULL;
+    return (L == NULL || L->Next == NULL);
+
 }
 int IsLast(Position p, List L) {
     return p->Next == NULL;
@@ -111,7 +113,7 @@ void PrintList(List L) {
     
     Position p = L->Next;
     while (p != NULL) {
-        printf("%d ",p->Element);
+        printf(" %d ",p->Element);
         p = p->Next;
     }
     printf("\n");
@@ -130,4 +132,36 @@ int ListLength(List L) {
         p = p->Next;
     }
     return length;
+}
+
+// 头插法创建单链表
+List CreateHeadListWithHead(ElementType *array, int length) {
+    List head;
+    PtrToNode newNode;
+    head = (List)malloc(sizeof(struct Node));
+    head->Next = NULL;
+    for (int i = 0; i < length; i++) {
+        newNode = (List)malloc(sizeof(struct Node));
+        newNode->Element = array[i];
+        newNode->Next = head->Next;
+        head->Next = newNode;
+    }
+    return head;
+}
+
+List CreateHeadListWithTail(ElementType *array, int length) {
+    List head;
+    PtrToNode p,newNode;
+    head = (List)malloc(sizeof(struct Node));
+    head->Next = NULL;
+    p = head;
+    
+    for (int i = 0; i < length; i++) {
+        newNode = (List)malloc(sizeof(struct Node));
+        newNode->Element = array[i];
+        newNode->Next = NULL;
+        p->Next = newNode;
+        p = newNode;
+    }
+    return head;
 }

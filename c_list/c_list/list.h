@@ -57,6 +57,14 @@ ElementType Retrieve(Position P);
 //遍历输出链表
 void PrintList(List L);
 
+//链表长度
 int ListLength(List L);
+
+// 头插法创建单链表
+List CreateHeadListWithHead(ElementType *array, int length);
+
+//尾插法创建单链表
+List CreateHeadListWithTail(ElementType *array, int length);
+
 
 #endif /* list_h */
