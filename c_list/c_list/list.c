@@ -103,3 +103,16 @@ Position Advance(Position P) {
 ElementType Retrieve(Position P) {
     return P->Element;
 }
+
+void PrintList(List L) {
+    if (L == NULL) {
+        return;
+    }
+    
+    Position p = L->Next;
+    while (p != NULL) {
+        printf("%d ",p->Element);
+        p = p->Next;
+    }
+    printf("\n");
+}
