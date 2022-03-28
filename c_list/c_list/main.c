@@ -27,11 +27,13 @@ int main(int argc, const char * argv[]) {
     List L = CreateHeadListWithHead(datas, len);
     Travel(L);
     
+    PtrToNode head =  Reverse(L);
+    Travel(head);
     
+    /*
     List L2 = CreateHeadListWithTail(datas, len);
-    printf("IsEmpty = %d\n",IsEmpty(L2));
     Travel(L2);
+    */
     
-    printf("length %d ",ListLength(L));
     return 0;
 }

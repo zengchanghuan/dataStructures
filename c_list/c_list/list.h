@@ -28,16 +28,16 @@ int IsEmpty(List L);
 int IsLast(Position p, List L);
 
 //查找链表中数据项为X的第一个结点
-Position Find(ElementType X, List L);
+Position Find(ElementType x, List L);
 
 //删除链表中数据项为X的第一个结点
-void Delete(ElementType X, List L);
+void Delete(ElementType x, List L);
 
 //查找链表中数据项为X的第一个结点的前驱
 Position FindPrevious(ElementType x, List L);
 
 //在链表中指定位置P插入数据项为X的结点
-void Insert(ElementType X, List L, Position P);
+void Insert(ElementType x, List L, Position p);
 
 //删除链表中除头结点外的所有结点
 void DeleteList(List L);
@@ -49,14 +49,13 @@ Position Header(List L);
 Position First(List L);
 
 //获得指定结点的后继结点
-Position Advance(Position P);
+Position Advance(Position p);
 
 //获得指定结点的数据项
-ElementType Retrieve(Position P);
+ElementType Retrieve(Position p);
 
 //遍历输出链表
-void PrintList(List L);
-//void Travel(List list);
+void Travel(List L);
 //链表长度
 int ListLength(List L);
 
@@ -66,5 +65,8 @@ List CreateHeadListWithHead(ElementType *array, int length);
 //尾插法创建单链表
 List CreateHeadListWithTail(ElementType *array, int length);
 
+//逆序
+List Reverse(List L);
 
+List Reverse2(List L);
 #endif /* list_h */

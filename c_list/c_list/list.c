@@ -10,8 +10,8 @@
 #include <stdlib.h>
 
 struct Node {
-    ElementType Element;
-    Position Next;
+    ElementType element;
+    Position next;
 };
 
 List MakeEmpty(List L) {
@@ -23,38 +23,38 @@ List MakeEmpty(List L) {
     if (L == NULL) {
         FatalError("out of memeory!");
     }
-    L->Next = NULL;
+    L->next = NULL;
     return L;
 }
 int IsEmpty(List L) {
-//    return L->Next == NULL;
-    return (L == NULL || L->Next == NULL);
+//    return L->next == NULL;
+    return (L == NULL || L->next == NULL);
 
 }
 int IsLast(Position p, List L) {
-    return p->Next == NULL;
+    return p->next == NULL;
 }
 Position Find(ElementType X, List L) {
     Position p;
-    p = L->Next;
-    while (p != NULL && p -> Element != X) {
-        p = p -> Next;
+    p = L->next;
+    while (p != NULL && p -> element != X) {
+        p = p -> next;
     }
     return p;
 }
 void Delete(ElementType X, List L) {
     Position p = NULL,tmpCell;
     if (!IsLast(p, L)) {
-        tmpCell = p -> Next;
-        p -> Next = tmpCell -> Next;
+        tmpCell = p -> next;
+        p -> next = tmpCell -> next;
         free(tmpCell);
     }
 }
 Position FindPrevious(ElementType x, List L) {
     Position p;
     p = L;
-    while (p->Next != NULL && p->Next->Element != x) {
-        p = p->Next;
+    while (p->next != NULL && p->next->element != x) {
+        p = p->next;
     }
     return p;
 }
@@ -64,31 +64,17 @@ void Insert(ElementType X, List L, Position P) {
     if (tmpCell == NULL) {
         FatalError("out of space!!!");
     }
-    tmpCell->Element = X;
-    tmpCell->Next = P->Next;
-    P->Next = tmpCell;
+    tmpCell->element = X;
+    tmpCell->next = P->next;
+    P->next = tmpCell;
 }
-
-/* Incorrect DeleteList algorithm */
-/*
-void DeleteList(List L) {
-    Position p;
-    
-    p = L->Next;
-    L->Next = NULL;
-    while (p != NULL) {
-        free(p);
-        p = p->Next;
-    }
-}
-*/
 
 void DeleteList(List L) {
     Position p,tmp;
-    p = L->Next;
-    L->Next = NULL;
+    p = L->next;
+    L->next = NULL;
     while (p != NULL) {
-        tmp = p->Next;
+        tmp = p->next;
         free(p);
         p = tmp;
     }
@@ -98,40 +84,68 @@ Position Header(List L) {
     return L;
 }
 Position First(List L) {
-    return L->Next;
+    return L->next;
 }
 Position Advance(Position P) {
-    return P->Next;
+    return P->next;
 }
 ElementType Retrieve(Position P) {
-    return P->Element;
+    return P->element;
 }
 
-void PrintList(List L) {
+void Travel(List L) {
     if (IsEmpty(L)) {
         return;
     }
     
-    Position p = L->Next;
+    Position p = L->next;
     while (p != NULL) {
-        printf(" %d ",p->Element);
-        p = p->Next;
+        printf(" %d ",p->element);
+        p = p->next;
     }
     printf("\n");
 }
-/*
-void Travel(List list){
-    List p = list;
-    if(!IsEmpty(list)){    // 单链表非空情况下才遍历
-        p = p -> Next;        // 因为带头结点单链表所以要先走一步
-        while(p != NULL){
-            printf("%d\t", p -> Element);
-            p = p -> Next;
-        }
-        printf("\n");
+List Reverse2(List L) {
+    
+    //保存cur的下一个结点
+    PtrToNode temp;
+    //pre指针指向前一个当前结点的前一个结点
+    PtrToNode pre = NULL;
+    //用head代替cur，也可以再定义一个cur结点指向head。
+    while(L) {
+        //保存下一个结点的位置
+        temp = L->next;
+        //翻转操作
+        L->next = pre;
+        //更新结点
+        pre = L;
+        L = temp;
     }
+    return pre;
+
 }
-*/
+
+List Reverse(List L) {
+    
+    PtrToNode curr;
+    PtrToNode q;
+    
+    if (IsEmpty(L)) {
+        return L;
+    }
+    
+    curr = L->next;
+    L->next = NULL;
+    while (curr != NULL) {
+        q = curr->next;
+        curr->next = L->next;
+        L->next = curr;
+        curr = q;
+    }
+    return L;
+
+}
+
 int ListLength(List L) {
     List p = L;
     int length = 0;
@@ -139,10 +153,10 @@ int ListLength(List L) {
         return length;
     }
     
-    p = p->Next;
+    p = p->next;
     while (p != NULL) {
         length++;
-        p = p->Next;
+        p = p->next;
     }
     return length;
 }
@@ -152,12 +166,12 @@ List CreateHeadListWithHead(ElementType *array, int length) {
     List head;
     PtrToNode newNode;
     head = (List)malloc(sizeof(struct Node));
-    head->Next = NULL;
+    head->next = NULL;
     for (int i = 0; i < length; i++) {
         newNode = (List)malloc(sizeof(struct Node));
-        newNode->Element = array[i];
-        newNode->Next = head->Next;
-        head->Next = newNode;
+        newNode->element = array[i];
+        newNode->next = head->next;
+        head->next = newNode;
     }
     return head;
 }
@@ -166,15 +180,17 @@ List CreateHeadListWithTail(ElementType *array, int length) {
     List head;
     PtrToNode p,newNode;
     head = (List)malloc(sizeof(struct Node));
-    head->Next = NULL;
+    head->next = NULL;
     p = head;
     
     for (int i = 0; i < length; i++) {
         newNode = (List)malloc(sizeof(struct Node));
-        newNode->Element = array[i];
-        newNode->Next = NULL;
-        p->Next = newNode;
+        newNode->element = array[i];
+        newNode->next = NULL;
+        p->next = newNode;
         p = newNode;
     }
     return head;
 }
+
+
