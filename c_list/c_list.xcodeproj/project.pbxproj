@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E6817C727FD260200624E98 /* linkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817C627FD260200624E98 /* linkedList.c */; };
+		8E6817CC27FD264600624E98 /* Status.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817CB27FD264600624E98 /* Status.c */; };
 		8E86256127EEA2BE003DA62F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E86256027EEA2BE003DA62F /* main.c */; };
-		8E86256E27EEC5D5003DA62F /* list.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E86256D27EEC5D5003DA62F /* list.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,11 +25,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8E6817C527FD260200624E98 /* linkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = linkedList.h; sourceTree = "<group>"; };
+		8E6817C627FD260200624E98 /* linkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = linkedList.c; sourceTree = "<group>"; };
+		8E6817C927FD264600624E98 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8E6817CA27FD264600624E98 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		8E6817CB27FD264600624E98 /* Status.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Status.c; sourceTree = "<group>"; };
 		8E86255D27EEA2BE003DA62F /* c_list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_list; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E86256027EEA2BE003DA62F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
-		8E86256A27EEA37A003DA62F /* fatal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fatal.h; sourceTree = "<group>"; };
-		8E86256C27EEC5D5003DA62F /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
-		8E86256D27EEC5D5003DA62F /* list.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = list.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,9 +45,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E6817C827FD264600624E98 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				8E6817C927FD264600624E98 /* CMakeLists.txt */,
+				8E6817CA27FD264600624E98 /* Status.h */,
+				8E6817CB27FD264600624E98 /* Status.c */,
+			);
+			name = Status;
+			path = ../Status;
+			sourceTree = "<group>";
+		};
 		8E86255427EEA2BE003DA62F = {
 			isa = PBXGroup;
 			children = (
+				8E6817C827FD264600624E98 /* Status */,
 				8E86255F27EEA2BE003DA62F /* c_list */,
 				8E86255E27EEA2BE003DA62F /* Products */,
 			);
@@ -61,10 +76,9 @@
 		8E86255F27EEA2BE003DA62F /* c_list */ = {
 			isa = PBXGroup;
 			children = (
-				8E86256D27EEC5D5003DA62F /* list.c */,
-				8E86256C27EEC5D5003DA62F /* list.h */,
-				8E86256A27EEA37A003DA62F /* fatal.h */,
 				8E86256027EEA2BE003DA62F /* main.c */,
+				8E6817C527FD260200624E98 /* linkedList.h */,
+				8E6817C627FD260200624E98 /* linkedList.c */,
 			);
 			path = c_list;
 			sourceTree = "<group>";
@@ -126,8 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6817C727FD260200624E98 /* linkedList.c in Sources */,
 				8E86256127EEA2BE003DA62F /* main.c in Sources */,
-				8E86256E27EEC5D5003DA62F /* list.c in Sources */,
+				8E6817CC27FD264600624E98 /* Status.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
