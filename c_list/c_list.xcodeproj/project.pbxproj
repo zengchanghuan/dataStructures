@@ -30,6 +30,8 @@
 		8E6817C927FD264600624E98 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
 		8E6817CA27FD264600624E98 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
 		8E6817CB27FD264600624E98 /* Status.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Status.c; sourceTree = "<group>"; };
+		8E6817CD27FD620200624E98 /* TestData_Head.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData_Head.txt; sourceTree = "<group>"; };
+		8E6817CE27FD620200624E98 /* TestData_Tail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData_Tail.txt; sourceTree = "<group>"; };
 		8E86255D27EEA2BE003DA62F /* c_list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_list; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E86256027EEA2BE003DA62F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -76,6 +78,8 @@
 		8E86255F27EEA2BE003DA62F /* c_list */ = {
 			isa = PBXGroup;
 			children = (
+				8E6817CD27FD620200624E98 /* TestData_Head.txt */,
+				8E6817CE27FD620200624E98 /* TestData_Tail.txt */,
 				8E86256027EEA2BE003DA62F /* main.c */,
 				8E6817C527FD260200624E98 /* linkedList.h */,
 				8E6817C627FD260200624E98 /* linkedList.c */,

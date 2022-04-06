@@ -34,9 +34,9 @@ Status GetElem(LinkList L,int i,ElementType *e);
 //返回链表中首个与e满足Compare关系的元素位序
 int LocateElem(LinkList L,ElementType e,Status(Compare)(ElementType,ElementType));
 
-Status PriorElem(LinkList L,ElementType curElement,ElementType preElement);
+Status PriorElem(LinkList L,ElementType curElement,ElementType *preElement);
 
-Status NextElem(LinkList L, ElementType curElement, ElementType* preElement);
+Status NextElem(LinkList L, ElementType curElement, ElementType *nextElement);
 
 Status ListInsert(LinkList L,int i,ElementType element);
 
@@ -47,5 +47,7 @@ void ListTraverse(LinkList L,void(Visit)(ElementType));
 Status CreateListHead(LinkList *L,int n,char *path);
 
 Status CreateListTail(LinkList *L,int n,char *path);
+
+//LNode * Reverse(LNode *L);
 
 #endif /* linkedList_h */
