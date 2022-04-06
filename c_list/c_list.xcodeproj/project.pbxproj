@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8E6817C727FD260200624E98 /* linkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817C627FD260200624E98 /* linkedList.c */; };
 		8E6817CC27FD264600624E98 /* Status.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817CB27FD264600624E98 /* Status.c */; };
+		8E6817D227FD8A1000624E98 /* MergeList.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817D127FD8A1000624E98 /* MergeList.c */; };
 		8E86256127EEA2BE003DA62F /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E86256027EEA2BE003DA62F /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		8E6817CB27FD264600624E98 /* Status.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Status.c; sourceTree = "<group>"; };
 		8E6817CD27FD620200624E98 /* TestData_Head.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData_Head.txt; sourceTree = "<group>"; };
 		8E6817CE27FD620200624E98 /* TestData_Tail.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestData_Tail.txt; sourceTree = "<group>"; };
+		8E6817D027FD8A1000624E98 /* MergeList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MergeList.h; sourceTree = "<group>"; };
+		8E6817D127FD8A1000624E98 /* MergeList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MergeList.c; sourceTree = "<group>"; };
 		8E86255D27EEA2BE003DA62F /* c_list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_list; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E86256027EEA2BE003DA62F /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +61,15 @@
 			path = ../Status;
 			sourceTree = "<group>";
 		};
+		8E6817CF27FD89FF00624E98 /* merge */ = {
+			isa = PBXGroup;
+			children = (
+				8E6817D027FD8A1000624E98 /* MergeList.h */,
+				8E6817D127FD8A1000624E98 /* MergeList.c */,
+			);
+			path = merge;
+			sourceTree = "<group>";
+		};
 		8E86255427EEA2BE003DA62F = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +90,7 @@
 		8E86255F27EEA2BE003DA62F /* c_list */ = {
 			isa = PBXGroup;
 			children = (
+				8E6817CF27FD89FF00624E98 /* merge */,
 				8E6817CD27FD620200624E98 /* TestData_Head.txt */,
 				8E6817CE27FD620200624E98 /* TestData_Tail.txt */,
 				8E86256027EEA2BE003DA62F /* main.c */,
@@ -144,6 +157,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E6817D227FD8A1000624E98 /* MergeList.c in Sources */,
 				8E6817C727FD260200624E98 /* linkedList.c in Sources */,
 				8E86256127EEA2BE003DA62F /* main.c in Sources */,
 				8E6817CC27FD264600624E98 /* Status.c in Sources */,

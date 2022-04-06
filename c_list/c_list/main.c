@@ -7,10 +7,28 @@
 #include <stdio.h>
 #include "Status.h"
 #include "linkedList.h"
-
+#include "merge/MergeList.h"
 void PrintElem(ElementType e);
 Status CmpGreater(ElementType data, ElementType e);
 int main(int argc, const char * argv[]) {
+    int array[5] = {2,3,4,5,6};
+
+    LinkList L1 = CreateHeadListWithTail(array, 5);
+    ListTraverse(L1, PrintElem);
+
+    int array2[5] = {11,22,33,44,55};
+    LinkList L2 = CreateHeadListWithTail(array2, 5);
+    ListTraverse(L2, PrintElem);
+    
+    LinkList L3;
+    MergeList(&L1, &L2,&L3);
+    ListTraverse(L3, PrintElem);
+
+
+    return 0;
+}
+
+int main2(int argc, const char * argv[]) {
 
     
     LinkList L;
