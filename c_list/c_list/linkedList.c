@@ -11,11 +11,12 @@ Status InitList (LinkList *L) {
     if(*L == NULL) {
         exit(OVERFLOW);
     }
-    
+
     (*L)->next = NULL;
-    
+
     return OK;
 }
+
 Status DestroyList (LinkList *L) {
     if (L == NULL || *L == NULL) {
         return ERROR;

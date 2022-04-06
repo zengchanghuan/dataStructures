@@ -44,10 +44,6 @@ Status ListDelete(LinkList L,int i,ElementType *element);
 
 void ListTraverse(LinkList L,void(Visit)(ElementType));
 
-//Status CreateListHead(LinkList *L,int n,char *path);
-//
-//Status CreateListTail(LinkList *L,int n,char *path);
-
 LinkList Reverse(LinkList L);
 
 // 头插法创建单链表
