@@ -341,3 +341,36 @@ Status CreateListTail(LinkList *L,int n,char *path) {
        
        return OK;
 }
+// 头插法创建单链表
+LinkList CreateHeadListWithHead(ElementType *array, int length) {
+    LinkList head;
+    LNode *newNode;
+    
+    head = (LinkList)malloc(sizeof(LNode));
+    head->next = NULL;
+    for (int i = 0; i < length; i++) {
+        newNode = (LinkList)malloc(sizeof(LNode));
+        newNode->data = array[i];
+        newNode->next = head->next;
+        head->next = newNode;
+    }
+    return head;
+}
+
+LinkList CreateHeadListWithTail(ElementType *array, int length) {
+    LinkList head;
+    LNode *p,*newNode;
+    head = (LinkList)malloc(sizeof(LNode));
+    head->next = NULL;
+    p = head;
+    
+    for (int i = 0; i < length; i++) {
+        newNode = (LinkList)malloc(sizeof(struct Node));
+        newNode->data = array[i];
+        newNode->next = NULL;
+        p->next = newNode;
+        p = newNode;
+    }
+    return head;
+}
+
