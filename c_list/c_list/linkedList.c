@@ -211,17 +211,24 @@ void ListTraverse(LinkList L,void(Visit)(ElementType)) {
     }
     printf("\n");
 }
-//LNode * Reverse(LNode *L) {
-//    LNode *tail = L;
-//    LNode *p = L;
-//    while (tail->next != NULL) {
-//        p = L;
-//        L = tail->next;
-//        tail->next = L->next;
-//        L->next = p;
-//    }
-//    return L;
-//}
+LinkList Reverse(LinkList L) {
+    if (L == NULL || L->next == NULL) {
+        return L;
+    }
+    LNode *curr;
+    LNode *pre;
+    
+    curr = L->next;
+    L->next = NULL;
+    
+    while (curr != NULL) {
+        pre = curr->next;
+        curr->next = L->next;
+        L->next = curr;
+        curr = pre;
+    }
+    return L;
+}
 
 Status CreateListHead(LinkList *L,int n,char *path) {
     int i;

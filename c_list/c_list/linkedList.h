@@ -48,6 +48,6 @@ Status CreateListHead(LinkList *L,int n,char *path);
 
 Status CreateListTail(LinkList *L,int n,char *path);
 
-//LNode * Reverse(LNode *L);
+LinkList Reverse(LinkList L);
 
 #endif /* linkedList_h */

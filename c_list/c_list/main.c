@@ -29,7 +29,7 @@ int main(int argc, const char * argv[]) {
     ListTraverse(L, PrintElem);
 //    LinkList *list = Reverse(L);
     printf("\n");
-//    ListTraverse(*list, PrintElem);
+    ListTraverse(Reverse(L), PrintElem);
 
     /*
 
