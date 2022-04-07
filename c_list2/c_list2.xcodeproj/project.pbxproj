@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E6817E027FE6EE900624E98 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817DF27FE6EE900624E98 /* main.c */; };
+		8E6817F027FE7B8400624E98 /* Status.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817EF27FE7B8400624E98 /* Status.c */; };
+		8E6817F327FE7D4600624E98 /* List.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E6817F227FE7D4600624E98 /* List.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		8E6817DC27FE6EE900624E98 /* c_list2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = c_list2; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E6817DF27FE6EE900624E98 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8E6817ED27FE7B8400624E98 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8E6817EE27FE7B8400624E98 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		8E6817EF27FE7B8400624E98 /* Status.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Status.c; sourceTree = "<group>"; };
+		8E6817F127FE7D4600624E98 /* List.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = List.h; sourceTree = "<group>"; };
+		8E6817F227FE7D4600624E98 /* List.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = List.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,22 @@
 		8E6817DE27FE6EE900624E98 /* c_list2 */ = {
 			isa = PBXGroup;
 			children = (
+				8E6817EC27FE7B8400624E98 /* Status */,
 				8E6817DF27FE6EE900624E98 /* main.c */,
+				8E6817F127FE7D4600624E98 /* List.h */,
+				8E6817F227FE7D4600624E98 /* List.c */,
 			);
 			path = c_list2;
+			sourceTree = "<group>";
+		};
+		8E6817EC27FE7B8400624E98 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				8E6817ED27FE7B8400624E98 /* CMakeLists.txt */,
+				8E6817EE27FE7B8400624E98 /* Status.h */,
+				8E6817EF27FE7B8400624E98 /* Status.c */,
+			);
+			path = Status;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +140,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E6817E027FE6EE900624E98 /* main.c in Sources */,
+				8E6817F327FE7D4600624E98 /* List.c in Sources */,
+				8E6817F027FE7B8400624E98 /* Status.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
