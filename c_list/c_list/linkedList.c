@@ -375,3 +375,4 @@ LinkList CreateHeadListWithTail(ElementType *array, int length) {
     return head;
 }
 
+

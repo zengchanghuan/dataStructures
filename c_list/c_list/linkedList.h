@@ -52,5 +52,4 @@ LinkList CreateHeadListWithHead(ElementType *array, int length);
 // 尾插法创建单链表
 LinkList CreateHeadListWithTail(ElementType *array, int length);
 
-
 #endif /* linkedList_h */
