@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E68181427FEC80200624E98 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E68181327FEC80200624E98 /* main.c */; };
+		8E68182627FEE34100624E98 /* Status.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E68182527FEE34100624E98 /* Status.c */; };
+		8E68182927FEE3B600624E98 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = 8E68182827FEE3B600624E98 /* Queue.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		8E68181027FEC80200624E98 /* queue_list */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = queue_list; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E68181327FEC80200624E98 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		8E68182327FEE34100624E98 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		8E68182427FEE34100624E98 /* Status.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Status.h; sourceTree = "<group>"; };
+		8E68182527FEE34100624E98 /* Status.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Status.c; sourceTree = "<group>"; };
+		8E68182727FEE3B600624E98 /* Queue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
+		8E68182827FEE3B600624E98 /* Queue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,22 @@
 		8E68181227FEC80200624E98 /* queue_list */ = {
 			isa = PBXGroup;
 			children = (
+				8E68182227FEE34100624E98 /* Status */,
 				8E68181327FEC80200624E98 /* main.c */,
+				8E68182727FEE3B600624E98 /* Queue.h */,
+				8E68182827FEE3B600624E98 /* Queue.c */,
 			);
 			path = queue_list;
+			sourceTree = "<group>";
+		};
+		8E68182227FEE34100624E98 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				8E68182327FEE34100624E98 /* CMakeLists.txt */,
+				8E68182427FEE34100624E98 /* Status.h */,
+				8E68182527FEE34100624E98 /* Status.c */,
+			);
+			path = Status;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E68182927FEE3B600624E98 /* Queue.c in Sources */,
 				8E68181427FEC80200624E98 /* main.c in Sources */,
+				8E68182627FEE34100624E98 /* Status.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
