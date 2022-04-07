@@ -17,9 +17,16 @@ void testLinkedList() {
    
 
     int array[10] = {1,3,5,7,9,11,13,15,17,21};
-    List list = CreateListWithHead(array, 10);
+    List list = CreateListWithTail(array, 10);
     printList(list);
-    printList(Reverse(list));
+//    printList(Reverse(list));
+    ElementType e;
+    GetElem(list, 4, &e);
+    printf("L 中第 4 个位置的元素为 \"%d\" \n", e);
+    
+    LNode *node = LocateElem(list, 13);
+    printf("node.next = %d\n",node->next->data);
+
 //    Position P = find(3, list);
 //    insert(0, list, P);
 //    printList(list);

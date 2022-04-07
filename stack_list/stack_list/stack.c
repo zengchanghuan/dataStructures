@@ -60,7 +60,8 @@ void Pop(Stack stack) {
         free(firstCell);
     }
 }
-ElementType Top(Stack stack) {
+
+ElementType Peek(Stack stack) {
     if (!IsEmpty(stack)) {
         return stack->next->element;
     }

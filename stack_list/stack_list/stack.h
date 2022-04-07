@@ -21,6 +21,6 @@ void DisposeStack(Stack s);
 void MakeEmpty(Stack s);
 void Push(ElementType x,Stack s);
 void Pop(Stack s);
-ElementType Top(Stack s);
+ElementType Peek(Stack s);
 
 #endif /* stack_h */

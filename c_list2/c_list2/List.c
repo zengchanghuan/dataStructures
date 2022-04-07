@@ -135,6 +135,22 @@ List CreateListWithHead(ElementType *array,int length) {
     return head;
     
 }
+List CreateListWithTail(ElementType *array,int length) {
+    List head = malloc(sizeof(LNode));
+    head->next = NULL;
+    
+    LNode *p,*newNode;
+    p = head;
+    
+    for (int i = 0; i < length; i++) {
+        newNode = malloc(sizeof(LNode));
+        newNode->data = array[i];
+        newNode->next = NULL;
+        p->next = newNode;
+        p = newNode;
+    }
+    return head;
+}
 void printList(List L) {
     if (L == NULL || L->next == NULL) {
         return;
@@ -166,6 +182,35 @@ List Reverse(List L) {
     }
     return L;
     
-    
 }
 
+Status GetElem(List L,int i,ElementType *e) {
+    if (L == NULL || L->next == NULL) {
+        return ERROR;
+    }
+    List p = L;
+    int j = 0;
+    
+    while (p->next != NULL && j < i - 1) {
+        p = p->next;
+        ++j;
+    }
+    
+    if (p->next == NULL || j > i - 1) {
+        return ERROR;
+    }
+    *e = p->next->data;
+    return OK;
+}
+
+LNode * LocateElem(List L,ElementType e) {
+    if (L == NULL || L->next == NULL) {
+        return 0;
+    }
+    
+    LNode *p = L->next;
+    while (p != NULL && p->data != e) {
+        p = p->next;
+    }
+    return p;
+}

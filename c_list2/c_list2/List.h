@@ -29,6 +29,13 @@ Status ListLength(List L);
 Status ListInsert(List L,int i,ElementType element);
 Status ListDelete(List L,int i,ElementType *element);
 List CreateListWithHead(ElementType *array,int length);
+List CreateListWithTail(ElementType *array,int length);
 void printList(List L);
 List Reverse(List L);
+
+//在带头结点的单链表L中根据序号l.获取元素的值，用e返回L中第l.个数据元素的值
+Status GetElem(List L,int i,ElementType *e);
+
+LNode * LocateElem(List L,ElementType e);
+
 #endif /* List_h */
