@@ -19,7 +19,7 @@ void testLinkedList() {
     int array[10] = {1,3,5,7,9,11,13,15,17,21};
     List list = CreateListWithTail(array, 10);
     printList(list);
-//    printList(Reverse(list));
+    printList(Reverse(list));
     ElementType e;
     GetElem(list, 4, &e);
     printf("L 中第 4 个位置的元素为 \"%d\" \n", e);

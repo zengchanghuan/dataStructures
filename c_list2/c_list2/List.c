@@ -184,6 +184,7 @@ List Reverse(List L) {
     
 }
 
+
 Status GetElem(List L,int i,ElementType *e) {
     if (L == NULL || L->next == NULL) {
         return ERROR;
